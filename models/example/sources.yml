@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: databricks_raw
+    catalog: Workspace
+    schema: dbs_schema
+
+    tables:
+      - name: customers
+      - name: products
+      - name: orders

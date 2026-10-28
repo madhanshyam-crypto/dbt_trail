@@ -1,0 +1,19 @@
+name: edg_cross_lineage_demo
+version: '1.0.0'
+config-version: 2
+
+profile: edg_cross_lineage_demo
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+models:
+  edg_cross_lineage_demo:
+    example:
+      staging:
+        +materialized: view
+      intermediate:
+        +materialized: view
+      marts:
+        +materialized: table
+        +schema: DBT_schema
